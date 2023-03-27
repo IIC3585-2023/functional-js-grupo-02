@@ -2,7 +2,7 @@ export function funcion1(n, text) {
   /**
   Cada frase debe comenzar con ​n​ espacios en blanco (después de un punto seguido) 
   **/
-  return text.replace(/\.\s+/g, '.' + ' '.repeat(n));
+  return text.split('\n').map((paragraph) => paragraph.replace(/\.\s+/g, '.' + ' '.repeat(n))).join('\n');
 }
 
 export function funcion2(n, text) {
