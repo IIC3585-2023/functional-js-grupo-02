@@ -12,7 +12,6 @@ export function funcion2(n, text) {
   return text.replace(/\.\n+/g, '.' + '\n'.repeat(n));
 }
 
-// To do
 export function funcion3(n, text) {
   /**
   El ancho del texto debe ser a lo más ​n​ (sin cortar palabras)
