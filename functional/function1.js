@@ -6,7 +6,7 @@ import _ from 'lodash';
 
 export default function startWithSpaces(n, text) {
     const startWithSpacesBasic = (n, text) => {
-    return text.replace(/\.\s+/g, '.' + ' '.repeat(n));
+    return text.split('\n').map((paragraph) => paragraph.replace(/\.\s+/g, '.' + ' '.repeat(n))).join('\n');
     }
     const startWithNspaces = _.curry(startWithSpacesBasic)(n);
     return startWithNspaces(text);
